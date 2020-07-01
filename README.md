@@ -1,3 +1,4 @@
-# Full-Stack-Open-Part-3
+# Phonebook Full Stack Application
 
-Nodejs server using Express
+Link to the application:
+https://degrassi-backbacon-60019.herokuapp.com/
