@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploygit": "git add . && git commit -m uibuild && git push -u origin master && git push heroku master",
+    "deployheroku": "git push heroku master && heroku open",
     "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.21",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
