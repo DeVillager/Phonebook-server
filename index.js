@@ -1,9 +1,9 @@
 require('dotenv').config()
 const Person = require('./models/person')
 const express = require('express')
-const { json } = require('express')
-const cors = require('cors');
-var morgan = require('morgan');
+// const { json } = require('express')
+const cors = require('cors')
+var morgan = require('morgan')
 const bodyParser = require('body-parser')
 const app = express()
 app.use(cors())
@@ -12,7 +12,7 @@ app.use(express.static('build'))
 // app.use(express.json())
 
 // Configuring morgan logger
-morgan.token('person', function (req, res) {
+morgan.token('person', function (req) {
   return JSON.stringify(req.body)
 })
 var logger = morgan(':method :url :status :res[content-length] - :response-time ms :person')
@@ -74,13 +74,13 @@ app.put('/api/persons/:id', (request, response, next) => {
 })
 
 //recusive function to find unused id
-const generateId = () => {
-  let id = Math.ceil(Math.random() * 100)
-  if (persons.map(p => p.id).includes(id)) {
-    id = generateId()
-  }
-  return id
-}
+// const generateId = () => {
+// let id = Math.ceil(Math.random() * 100)
+// if (persons.map(p => p.id).includes(id)) {
+//   id = generateId()
+// }
+// return id
+// }
 
 app.post('/api/persons', (req, res, next) => {
   const body = req.body
@@ -123,7 +123,7 @@ const errorHandler = (error, request, response, next) => {
 
 app.use(errorHandler)
 
-
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)

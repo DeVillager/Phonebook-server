@@ -8,7 +8,8 @@
     "deployheroku": "git push heroku master && heroku open",
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "author": "Tommi Makelainen",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^7.4.0",
     "nodemon": "^2.0.4"
   }
 }
