@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploygit": "git add . && git commit -m uibuild && git push -u origin master && git push heroku master",
+    "deploygit": "git add . && git commit -m uibuild && git push -u origin master",
     "deployheroku": "git push heroku master && heroku open",
     "dev": "nodemon index.js",
     "start": "node index.js",
